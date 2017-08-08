@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="551.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginPageFXMLController">
+   <children>
+      <Label layoutX="10.0" layoutY="23.0" prefHeight="56.0" prefWidth="435.0" text="WELCOME TO AESTHETIC  TEXT EDITOR" textFill="#cd3030">
+         <font>
+            <Font name="Javanese Text" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#311e57" height="0.0" radius="0.9824999999999999" width="5.93">
+               <input>
+                  <ColorAdjust brightness="-0.14" contrast="0.12" hue="0.48" saturation="1.0" />
+               </input>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="133.0" layoutY="66.0" prefHeight="41.0" prefWidth="184.0" text="SIMPLE, ELEGANT, SECURE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="8.0" layoutY="139.0" prefHeight="127.0" prefWidth="435.0" text="At Aesthetic, we believe in privacy, Integrity and Individual Security. Therefore to protect individual interests over the files that you create, store or update. We make sure that it can be seen only by you. This Text Editor is most suitable for people looking for maintaining confidential data without risk. To continue using our product please LOGIN or REGISTER " textFill="#27818a" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUser" layoutX="10.0" layoutY="298.0" prefHeight="34.0" prefWidth="204.0" promptText="USERNAME" />
+      <TextField fx:id="txtPwd" layoutX="232.0" layoutY="298.0" prefHeight="34.0" prefWidth="204.0" promptText="PASSWORD" />
+      <Button fx:id="btnLogin" layoutX="58.0" layoutY="364.0" mnemonicParsing="false" onAction="#ae" prefHeight="34.0" prefWidth="109.0" text="LOGIN" />
+      <Label layoutX="10.0" layoutY="432.0" prefHeight="34.0" prefWidth="204.0" text="FORGOT YOUR PASSWORD? RESET IT " />
+      <Label fx:id="lblForgot" layoutX="214.0" layoutY="438.0" onMouseClicked="#mc" prefHeight="23.0" prefWidth="32.0" text="HERE" textFill="#3f964a">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="10.0" layoutY="476.0" prefHeight="23.0" prefWidth="204.0" text="IF YOU'RE NOT YET A MEMBER, THEN " />
+      <Label fx:id="lblRegister" layoutX="213.0" layoutY="479.0" onMouseClicked="#mc" prefHeight="17.0" prefWidth="38.0" text="JOIN" textFill="#3f964a">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="246.0" layoutY="479.0" text="NOW" />
+      <Button fx:id="btnReset" layoutX="280.0" layoutY="364.0" mnemonicParsing="false" onAction="#ae" prefHeight="34.0" prefWidth="109.0" text="RESET" />
+   </children>
+</AnchorPane>

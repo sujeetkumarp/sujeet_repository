@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TextEditorFXMLController">
+   <children>
+      <MenuBar layoutX="-1.0" layoutY="2.0" prefHeight="25.0" prefWidth="672.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="fileMenu" mnemonicParsing="false" onAction="#he" text="New" />
+                  <MenuItem fx:id="fileOpen" mnemonicParsing="false" onAction="#he" text="Open" />
+                  <MenuItem fx:id="fileSave" mnemonicParsing="false" onAction="#he" text="Save" />
+                  <MenuItem fx:id="fileSaveAs" mnemonicParsing="false" onAction="#he" text="Save As.." />
+                  <MenuItem fx:id="filePrint" mnemonicParsing="false" onAction="#he" text="Print" />
+              <MenuItem fx:id="fileExit" mnemonicParsing="false" onAction="#he" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem fx:id="editCut" mnemonicParsing="false" onAction="#he" text="Cut" />
+                  <MenuItem fx:id="editCopy" mnemonicParsing="false" onAction="#he" text="Copy" />
+              <MenuItem fx:id="editDelete" mnemonicParsing="false" onAction="#he" text="Delete" />
+                  <MenuItem fx:id="editPaste" mnemonicParsing="false" onAction="#he" text="Paste" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Size">
+               <graphic>
+                  <ComboBox fx:id="cmbSize" onAction="#he" prefWidth="150.0" />
+               </graphic>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Font">
+               <graphic>
+                  <ComboBox fx:id="cmbFont" onAction="#he" prefWidth="150.0" />
+               </graphic>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="helpAbout" mnemonicParsing="false" onAction="#he" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="txtArea" layoutX="-1.0" layoutY="27.0" onKeyReleased="#kr" prefHeight="498.0" prefWidth="672.0" />
+      <Label fx:id="lblposn" layoutX="14.0" layoutY="523.0" />
+   </children>
+</AnchorPane>
