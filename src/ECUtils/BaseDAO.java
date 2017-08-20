@@ -7,16 +7,16 @@ public class BaseDAO {
 	 Connection con = null;
 	 try {
 		con = DriverManager.getConnection("jdbc:mysql://"+DB_HOST+":3306/"+DB_NAME, DB_USER, DB_PASS);
-	} catch (Exception e) {
-		e.printStackTrace();
+	} catch (SQLException e) {
+		System.out.println("Exception Caught "+e);
 	}
 	return con;		
  }
  public static void closeCon(Connection con){
 	 try {
 		 con.close();
-	} catch (Exception e) {
-		e.printStackTrace();
+	} catch (SQLException e) {
+		System.out.println("Exception Caught "+e);
 	}
  }
 

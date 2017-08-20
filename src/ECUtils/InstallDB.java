@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import static ECUtils.ECConst.*;
+import java.sql.SQLException;
 
 public class InstallDB  {
 	public static void main(String[] args) {
@@ -25,8 +26,8 @@ public class InstallDB  {
 			st.executeUpdate();
 			con.close();		
 			System.out.println(DB_NAME + " created");
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (SQLException e) {
+			System.out.println("Exception Caught "+e);
 		}
 	}
 	public static void runSQL(String sql){
@@ -36,8 +37,8 @@ public class InstallDB  {
 			st.executeUpdate();
 			con.close();
 			System.out.println("sql completed!!");
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (SQLException e) {
+			System.out.println("Exception Caught "+e);
 		}
 	}	
 }

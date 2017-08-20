@@ -27,7 +27,6 @@ import javafx.scene.control.TextArea;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.paint.Color;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 

@@ -10,6 +10,7 @@ import TextEditor.bean.Users;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.LinkedList;
 
 /**
@@ -31,8 +32,8 @@ public class UserDAO extends BaseDAO{
             st.setString(i++, p1.getSecurityQues());
             st.setString(i++, p1.getAnswer());
             st.executeUpdate();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("Exception Caught "+e);
         }
         finally{
             closeCon(con);
@@ -52,8 +53,8 @@ public class UserDAO extends BaseDAO{
             st.setString(i++, p1.getPassword());
             st.setString(i++, p1.getUserNAme());
             st.executeUpdate();
-        } catch (Exception e) {
-       e.printStackTrace();
+        } catch (SQLException e) {
+       System.out.println("Exception Caught "+e);
         }
         finally{
             closeCon(con);
@@ -70,8 +71,8 @@ public class UserDAO extends BaseDAO{
             PreparedStatement st = con.prepareCall(sql);
             st.setString(i++, id);
             st.executeUpdate();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("Exception Caught "+e);
         }
         finally{
             closeCon(con);
@@ -79,7 +80,7 @@ public class UserDAO extends BaseDAO{
     }
     
     public static LinkedList<Users> search(String sc, String si){
-        LinkedList<Users> res = new LinkedList<Users>();
+        LinkedList<Users> res = new LinkedList<>();
         Connection con = null;
         try {
             con = getCon();
@@ -98,8 +99,8 @@ public class UserDAO extends BaseDAO{
             res.add(p1);
             }
             
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("Exception Caught "+e);
         }
         finally{
             closeCon(con);
@@ -127,8 +128,8 @@ public class UserDAO extends BaseDAO{
             p1.setUserNAme(rs.getString("u_name"));
             res=p1;
             }
-        } catch (Exception e) {
-        e.printStackTrace();
+        } catch (SQLException e) {
+        System.out.println("Exception Caught "+e);
         }
         finally{
             closeCon(con);
